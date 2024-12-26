@@ -3,8 +3,10 @@ package com.recipeapp.ui;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
+import com.recipeapp.datahandler.DataHandler;
+
 
 public class RecipeUI {
     private BufferedReader reader;
@@ -48,6 +50,10 @@ public class RecipeUI {
             } catch (IOException e) {
                 System.out.println("Error reading input from user: " + e.getMessage());
             }
+        }
+
+        Private void displayRecipes(){
+            System.out.print();
         }
     }
 }

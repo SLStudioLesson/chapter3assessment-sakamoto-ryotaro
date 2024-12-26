@@ -1,5 +1,10 @@
 package com.recipeapp.datahandler;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.recipeapp.model.Recipe;
+
 
 public class CSVDataHandler implements DataHandler{
     //レシピデータを格納するCSVファイルのパス。
@@ -14,22 +19,26 @@ public class CSVDataHandler implements DataHandler{
 
     @Override
     public String getMode(){
-        String moji1 = "CSV";
-        return moji1;
+        
+        return "CSV";
     }
 
     @Override
-    public String readData(){
+    public ArrayList<Recipe> readData(){
         return null;
     }
 
     @Override
-    public void String writeData(){
+    public void writeData(Recipe recipe){
         
     }
 
     @Override
-    public String searchData(){
+    public ArrayList<Recipe> searchData(String keyword){
         return null;
+    }
+
+    public ArrayList<Recipe> readDate()throws IOException{
+        
     }
 }

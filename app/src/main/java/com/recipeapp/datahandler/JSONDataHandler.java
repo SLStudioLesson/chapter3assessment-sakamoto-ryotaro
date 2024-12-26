@@ -1,25 +1,29 @@
 package com.recipeapp.datahandler;
 
+import java.util.ArrayList;
+import com.recipeapp.ui.RecipeUI;
+import com.recipeapp.model.Recipe;
+
 public class JSONDataHandler implements DataHandler{
     @Override
     public String getMode(){
-        String moji2 = "JSON";
-        return moji2;
+        return "JSON";
     }
 
     @Override
-    public String readData(){
+    public ArrayList<Recipe> readData(){
+        return null;
+    }
+
+    @Override
+    public void writeData(Recipe recipe){
         
-        return null;
     }
 
     @Override
-    public String writeData(){
-
-    }
-
-    @Override
-    public String searchData(){
+    public ArrayList<Recipe> searchData(String keyword){
         return null;
     }
+
+    
 }
