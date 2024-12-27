@@ -15,17 +15,22 @@ public class App {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             
             System.out.println("Choose the file format:");
-            System.out.println("1. CSV");
+            System.out.println(". CSV");
             System.out.println("2. JSON");
             System.out.print("Select (1/2): ");
             String choice = reader.readLine();
             int choice1 = Integer.parseInt(choice);
             DataHandler dataHandler = null;
             System.out.println();
-            if(choice1 == 1 || choice1 != 2){
-                dataHandler =new CSVDataHandler();
-            }else if(choice1 == 2){
+            if (choice1 == 1){
+                dataHandler = new CSVDataHandler();
+                System.out.println("Current mode: CSV");
+            } else if (choice1 == 2){
                 dataHandler = new JSONDataHandler();
+                System.out.println("Current mode: JSON");
+            }else{
+                dataHandler = new CSVDataHandler();
+                System.out.println("Current mode: CSV");
             }
             RecipeUI ui = new RecipeUI(dataHandler);
             ui.displayMenu();

@@ -24,7 +24,7 @@ class CSVDataHandlerTest {
     @BeforeEach
     void setUp() throws IOException {
         System.out.println(System.getProperty("user.dir"));
-        handler = new CSVDataHandler(testFilePath);
+        handler = new CSVDataHandler();
         // テスト用のファイルを準備
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(testFilePath))) {
             writer.write("Tomato Soup,Tomatoes, Onion, Garlic, Vegetable Stock\n");

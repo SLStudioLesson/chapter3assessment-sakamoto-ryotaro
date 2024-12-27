@@ -1,8 +1,9 @@
 package com.recipeapp.datahandler;
 
 import java.util.ArrayList;
-import com.recipeapp.ui.RecipeUI;
+//import com.recipeapp.ui.RecipeUI;
 import com.recipeapp.model.Recipe;
+import java.io.IOException;
 
 public class JSONDataHandler implements DataHandler{
     @Override
@@ -11,7 +12,7 @@ public class JSONDataHandler implements DataHandler{
     }
 
     @Override
-    public ArrayList<Recipe> readData(){
+    public ArrayList<Recipe> readData()throws IOException{
         return null;
     }
 
@@ -21,7 +22,7 @@ public class JSONDataHandler implements DataHandler{
     }
 
     @Override
-    public ArrayList<Recipe> searchData(String keyword){
+    public ArrayList<Recipe> searchData(String keyword)throws IOException{
         return null;
     }
 
